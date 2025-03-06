@@ -3,6 +3,7 @@ package inventario;
 import java.util.ArrayList;
 
 public class Inventario {
+
     public ArrayList<Producto> listaProductos;
 
     public Inventario() {
@@ -23,14 +24,12 @@ public class Inventario {
         Inventario inventario = new Inventario();
         Producto p1 = Producto.crearProducto("Laptop", 1200.99, 10);
         Producto p2 = Producto.crearProducto("Mouse", 25.50, 50);
-        
+
         inventario.agregar(p1);
         inventario.agregar(p2);
-        
+
         System.out.println("Inventario de productos:");
         inventario.mostrar();
 
-        p1.borrarDatos();
-        p2.borrarDatos();
     }
 }
