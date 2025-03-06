@@ -43,14 +43,19 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
     private String nombre;
     private double precio;
     private int stock;
 
-    public Producto(String nombre, double precio, int stock) {
+    private Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+    }
+
+    public static Producto crearProducto(String nombre, double precio, int stock) {
+        return new Producto(nombre, precio, stock);
     }
 
     public void mostrarInformacion() {
